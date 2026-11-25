@@ -1,0 +1,27 @@
+[project]
+name = "stategraph-react-agent"
+version = "0.1.0"
+description = "State-graph ReAct agent with short-term memory, cycle bounds and human-in-the-loop approval"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=1.0,<2",
+    "langchain-openai>=1.0,<2",
+    "langchain-core>=1.0,<2",
+    "pydantic",
+    "fastapi",
+    "uvicorn",
+    "python-dotenv",
+    "pytest",
+    "pytest-asyncio",
+    "streamlit",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = ["live: needs OPENAI_API_KEY"]
+asyncio_default_fixture_loop_scope = "function"
