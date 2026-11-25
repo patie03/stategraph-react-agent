@@ -2,7 +2,7 @@
 
 An internal **Cloud & Financial Operations** agent built on an explicit **LangGraph state machine** instead of a `while True` loop. It reads metrics and balances on its own, but **pauses for a human** before it scales infrastructure or moves money. It remembers each conversation thread, and a **circuit breaker** stops runaway loops within 6 iterations.
 
-- **Live demo:** _add your Streamlit URL here_
+- **Live demo:** https://stategraph-patience.streamlit.app
 - **Video walkthrough:** _add your YouTube link here_
 
 All systems are simulated (no real cluster or bank account is touched).

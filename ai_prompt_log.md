@@ -128,8 +128,8 @@ confirmation = f"WT-{sum(e['action'] == 'execute_wire_transfer' for e in EXECUTI
 - The tests use a scripted model for determinism; the live gpt-4o-mini tests run only when a key is present.
 
 ## 5. My verification (tick after doing it myself)
-- [ ] `uv run pytest -v`: all tests pass (live tests run with my key)
-- [ ] A safe question runs to END without the approval card
-- [ ] "My name is Alice" → "What is my name?" remembers on the same thread
-- [ ] The full scenario pauses; Approve runs both actions; Reject cancels them without asking again
-- [ ] The loop test toggle trips the circuit breaker
+- [x] `uv run pytest -v`: 17 passed, including the live gpt-4o-mini tests
+- [x] A safe question runs to END without the approval card
+- [x] "My name is Alice" → "What is my name?" remembers on the same thread
+- [x] The full scenario pauses; Approve runs both actions; Reject cancels them without asking again
+- [x] The loop test toggle trips the circuit breaker
